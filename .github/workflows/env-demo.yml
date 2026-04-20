@@ -1,19 +1,10 @@
 name: Env Demo
 on: workflow_dispatch
-
 env:
-  APP_ENV: "dev"  # This must be ALL CAPS
-
+  APP_ENV: "dev"
 jobs:
-  build:
+  env_demo:
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout the code
-        uses: actions/checkout@v4
-
-      # --- ADD THIS STEP BACK ---
       - name: Connecting to Env
         run: echo "App is connecting to $APP_ENV"
-
-      - name: Print index.html file
-        run: cat index.html
