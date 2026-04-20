@@ -13,5 +13,8 @@ jobs:
       - name: Print all variables under github
         run: echo "${{ toJson(github) }}"
 
-      - name: Print environment variables
+      - name: Print all environment variables
         run: printenv
+
+      - name: Print specific environment variable
+        run: echo "The Commit SHA is $GITHUB_SHA"
