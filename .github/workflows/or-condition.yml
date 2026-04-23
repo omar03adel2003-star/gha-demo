@@ -1,0 +1,9 @@
+name: Or Condition Demo
+on: push
+jobs:
+  demo:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Run for Omar or main
+        if: github.actor == 'omar03adel2003-star' || github.ref == 'refs/heads/main'
+        run: echo "It is triggered by either Omar or main branch"
